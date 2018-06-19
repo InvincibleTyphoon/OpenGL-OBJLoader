@@ -57,7 +57,7 @@ char * ToString()
 void SetColor(GLint colorLoc, float* color)
 
 // Static methods
-// Thes codes do not worl yet
+// These codes do not work yet
 static void MoveAll(vector<float> movement); 
 static void MoveAll(float* movement);
 static void RotateAll(vector<float> rotAngle);
