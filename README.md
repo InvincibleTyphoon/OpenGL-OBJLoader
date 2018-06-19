@@ -2,6 +2,17 @@
 
 Developed with visual studio 2017
 
+
+How to use
+```
+1. Create object of OBJLoader class.
+(You may need to give filename to constructer in this step)
+
+2. Call OBJLoader::Draw() method in OpenGL display function
+```
+
+
+
 # OBJLoader.h
 
 Class that used for load .OBJ format files.
