@@ -28,6 +28,23 @@ OBJLoader(string fname) : File name : fname, Set size, rotation, position as def
 OBJLoader(char * fname, float size[], float pos[], float rot[]) : File name : fname, set size, position, rotation
 OBJLoader(const char fname[], float size[], float pos[], float rot[]) : File name : fname, set size, position, rotation
 
+
+// Draw the object.
+// You may call this method in display function(the function set with glutDisplayFunc())
+void Draw(GLuint posLoc)
+
+// Returns object name
+// Use for debug
+char * ToString()
+
+// Set color of the object
+// This method will simply set color with one color
+void SetColor(GLint colorLoc, float* color)
+```
+
+Methods currently not working.
+You may ignore these methods.
+```
 //Move object
 // Thes codes do not worl yet
 void Move(vector<float>& movement)
@@ -43,18 +60,6 @@ void Rotate(float* newRotation)
 void Scale(vector<float>& newSize)
 void Scale(float newSize[])
 void Scale(float newSize)
-
-// Draw the object.
-// You may call this method in display function(the function set with glutDisplayFunc())
-void Draw(GLuint posLoc)
-
-// Returns object name
-// Use for debug
-char * ToString()
-
-// Set color of the object
-// This method will simply set color with one color
-void SetColor(GLint colorLoc, float* color)
 
 // Static methods
 // These codes do not work yet
