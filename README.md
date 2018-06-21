@@ -76,4 +76,4 @@ static void AddNewObj(OBJLoader* newLoader);
 
 # OBJLoaderClassExample.cpp
 
-Example program
+Example code using OBJLoader
