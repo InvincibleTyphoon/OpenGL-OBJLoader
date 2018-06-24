@@ -15,7 +15,7 @@ How to use
 
 # OBJLoader.h
 
-Class that used for load .OBJ format files.
+Class used for load .OBJ format files.
 
 API
 ```
@@ -30,7 +30,7 @@ OBJLoader(const char fname[], float size[], float pos[], float rot[]) : File nam
 
 
 // Draw the object.
-// You may call this method in display function(the function set with glutDisplayFunc())
+// You need to call this method in display function(the function set with glutDisplayFunc())
 void Draw(GLuint posLoc)
 
 // Returns object name
