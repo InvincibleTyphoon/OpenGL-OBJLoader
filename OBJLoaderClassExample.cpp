@@ -17,6 +17,7 @@
 
 using namespace std;
 
+// Vertex Shader script
 const char*  vsSource = "#version 120 \n\
 attribute vec4 aPos; \n\
 attribute vec4 aColor; \n\
@@ -26,15 +27,16 @@ void main(){ \n\
 	vColor = aColor; \n\
 }";
 
+// Fragment Shader script
 const char* fsSource = "#version 120 \n\
 varying vec4 vColor; \n\
 void main(){ \n\
 	gl_FragColor = vColor; \n\
 }";
 
-GLuint vs = 0;
-GLuint fs = 0;
-GLuint prog = 0;
+GLuint vs = 0;		//vertex shader indicator
+GLuint fs = 0;		//fragment shader indicator
+GLuint prog = 0;	//program
 
 char buf[1024];
 
@@ -82,7 +84,7 @@ void myinit() {
 	glShaderSource(fs, 1, &fsSource, NULL);
 	glCompileShader(fs);	//compile to get .OBJ
 
-							//에러 여부 확인
+	// Error checking
 	glGetShaderiv(fs, GL_COMPILE_STATUS, &status);
 	printf("fs compile status = %s\n", (status == GL_TRUE) ? "true" : "false");
 	glGetShaderInfoLog(fs, sizeof(buf), NULL, buf);
@@ -99,7 +101,6 @@ void myinit() {
 	glGetProgramInfoLog(prog, sizeof(buf), NULL, buf);
 	printf("validate log = [%s]\n", buf);
 
-	//프로그램 실행
 	glUseProgram(prog);
 }
 
